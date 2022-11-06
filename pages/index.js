@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Container from "../components/Grid/Container";
+import Games from "./games";
 
 export default function Home() {
   return (
@@ -10,9 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container>
-        <h1>Centered text</h1>
-      </Container>
+      <Games></Games>
     </div>
   );
 }
