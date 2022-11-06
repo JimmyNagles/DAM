@@ -1,8 +1,6 @@
 import React from "react";
 import Head from "next/head";
 
-import { Chat } from "@pushprotocol/uiweb";
-
 const Chatroom = () => {
   return (
     <div>
