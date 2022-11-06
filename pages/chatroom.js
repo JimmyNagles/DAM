@@ -12,6 +12,10 @@ const Chatroom = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className="h-[500px] w-full">
+        <h1>Welcome!</h1>
+      </div>
+
       <Chat
         account="0xf2997b416b3214BF1A41431A2B7Fa49F4b75eF8f" //user address
         supportAddress="0x872F28c70eD27D7B8f58cc2A9264A4414548f4fc" //support address
