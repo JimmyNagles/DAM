@@ -1,6 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
+import { Chat } from "@pushprotocol/uiweb";
+
 const Chatroom = () => {
   return (
     <div>
@@ -10,15 +12,17 @@ const Chatroom = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* {renderButton()}
-        {address}
-        <Chat
-          account={address} //user address
-          supportAddress="0xf2997b416b3214BF1A41431A2B7Fa49F4b75eF8f" //support address
-          apiKey="jVPMCRom1B.iDRMswdehJG7NpHDiECIHwYMMv6k2KzkPJscFIDyW8TtSnk4blYnGa8DIkfuacU0"
-          env="staging"
-          primaryColor="black"
-        /> */}
+      <div className="h-[500px] w-full">
+        <h1>Welcome!</h1>
+      </div>
+
+      <Chat
+        account="0xf2997b416b3214BF1A41431A2B7Fa49F4b75eF8f" //user address
+        supportAddress="0x872F28c70eD27D7B8f58cc2A9264A4414548f4fc" //support address
+        apiKey="9uYRhy0hol.fDp4IHD7auZOFpNDDtz2Ql4i2W9RYj2tpA9TLWyuX4AmVIC3Ge9MtyAHJAWOB6je"
+        env="staging"
+        primaryColor="black"
+      />
     </div>
   );
 };
