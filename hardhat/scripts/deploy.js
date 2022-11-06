@@ -3,7 +3,8 @@ require("dotenv").config({ path: ".env" });
 
 async function main() {
   // URL from where we can extract the metadata for a DamNFTs
-  const metadataURL = "ipfs://QmNMiUKHpmNwNZeCwWSUQWP227fGFnrqF1dFmvh21RSycG/";
+  const metadataURL =
+    "https://bafybeifloqzb6mgqcjikzydavnirpr3miqvzwxomow5gjqsvcn5tbm5vcy.ipfs.nftstorage.link/";
   /*
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
   so damContract here is a factory for instances of our DamNFTs contract.
