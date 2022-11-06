@@ -1,6 +1,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import Image from "next/image";
 const GameCard = ({
   Total = 149,
   GameId = 0,
@@ -8,9 +9,14 @@ const GameCard = ({
   GameImg = "image game",
 }) => {
   return (
-    <div className="w-[300px] h-[300px] shadow-xl hover:shadow-2xl mt-4 border  ">
-      <div className="w-[200px] h-[140px] p-2 ">
-        <h1>IMG</h1>
+    <div className="w-[300px] h-[300px] shadow-xl hover:shadow-2xl mt-4 border flex flex-col justify-center items-center  ">
+      <div className="w-[200px] h-[200px]  ">
+        <Image
+          src="/dam.png"
+          alt="Picture of the author"
+          width={200}
+          height={140}
+        />
       </div>
 
       <div className="h-[60px] p-2 ">
@@ -25,8 +31,8 @@ const GameCard = ({
           }}
           passHref
         >
-          <button className="h-full w-full  hover:bg-black hover:text-white">
-            More info
+          <button className="w-[150px] p-2 hover:bg-black hover:text-white">
+            Play
           </button>
         </Link>
       </div>

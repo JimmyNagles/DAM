@@ -5,7 +5,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 const navigation = [
   { name: "Play", href: "/", current: false },
   { name: "Chat", href: "/chatroom", current: false },
-  { name: "Ens", href: "/ens", current: false },
 ];
 
 function classNames(...classes) {
