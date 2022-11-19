@@ -127,7 +127,7 @@ const Div = styled.div`
 const Gamebox = styled.div`
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
-  background-color: blue;
+  background-color: black;
   position: relative;
   overflow: hidden;
 `;
