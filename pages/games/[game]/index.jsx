@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import ItemCard from "../../../components/Cards/ItemCard";
+import Link from "next/link";
 const GamePage = ({ game }) => {
   return (
     <div>
@@ -19,16 +20,35 @@ const GamePage = ({ game }) => {
 
         {/* all the NFTs in the collection */}
         <div className="min-h-[300px] w-full grid grid-cols-2 ">
-          <div className="w-full h-full text-center">
-            <button className="w-[90%] h-[90%] bg-black text-white ">
-              Free Play
-            </button>
+          <div className="w-full h-full text-center ">
+            <Link
+              href={{
+                pathname: "/flappybird",
+                // query: {
+                //   GameName: game.GameName,
+                //   id: game.GameId,
+                //   game: game.GameImg,
+                //   itemId: game.GameName,
+                // },
+              }}
+              passHref
+            >
+              <button className="w-[90%] h-[90%] bg-black  hover:mix-blend-overlay  text-white ">
+                Free Play
+              </button>
+            </Link>
           </div>
           <div className="w-[90%] h-[90%] text-center">
-            <button className="w-full h-full bg-black text-white ">
-              Competitive Play
-            </button>
+            <Link href="">
+              <button className="w-full h-full bg-black text-white ">
+                Competitive Play
+              </button>
+            </Link>
           </div>
+        </div>
+
+        <div className="w-full flex flex-col justify-center items-center">
+          <h1>Rankings</h1>
         </div>
       </div>
     </div>

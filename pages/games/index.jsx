@@ -97,20 +97,38 @@ const Games = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="h-[200px] mt-5 flex flex-col justify-center items-center">
-        <h1 className="text-2xl p-2">Decentralize Arcade Machine</h1>
-        <div className="w-full flex flex-col justify-center p-2 bg-black h-[150px] text-white">
-          <h1>Player ID: {ens ? ens : address}</h1>
-          <Link href={"https://app.ens.domains/"}>
-            <button className="w-[150px] text-sm h-[50px] mt-2 p-1 bg-white text-black">
-              Get Custom ID
-            </button>
-          </Link>
+      <div className="flex flex-col justify-center items-center">
+        <div className="w-full grid grid-cols-3 justify-center p-5  bg-black h-[100px] md:h-[150px] text-white">
+          {/* first col */}
+          <div className="w-full h-full grid grid-rows-2 ">
+            <h1 className="place-self-center">Player ID</h1>
+            <h1 className="place-self-center">{ens ? ens : address}</h1>
+          </div>
+          {/* second col */}
+          <div className="w-full h-full grid ">
+            {/* <h1 className="text-xm  md:text-xl p-2 place-self-center">
+              Decentralize Arcade Machine
+            </h1> */}
+          </div>
+
+          <div className="w-full h-full ">
+            <Link href={"https://app.ens.domains/"}>
+              <button
+                onClick={() => {
+                  //https://app.ens.domains/
+                  console.log("Sends user to ens domains page");
+                }}
+                className=" w-full h-full text-sm  p-2 bg-white rounded text-black hover:bg-black hover:text-white"
+              >
+                Get Custom ID
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
       <div className="min-h-screen flex  items-center w-full justify-evenly -mt-10">
-        <GameCard GameImg={`/Temple`} GameId={1} GameName={"Temple Run"} />
+        <GameCard GameImg={`/Flappy`} GameId={1} GameName={"FlappyBird"} />
       </div>
     </div>
   );

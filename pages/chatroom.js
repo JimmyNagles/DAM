@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 
 import { Chat } from "@pushprotocol/uiweb";
 
 const Chatroom = () => {
+  const [first, setfirst] = useState("");
   return (
     <div>
       <Head>
@@ -13,12 +14,14 @@ const Chatroom = () => {
       </Head>
 
       <div className="h-[500px] w-full">
-        <h1>Welcome!</h1>
+        <h1 className="text-xl">Welcome!</h1>
+        <label>Contact Address</label>
+        <input value={first}></input>
       </div>
 
       <Chat
         account="0xf2997b416b3214BF1A41431A2B7Fa49F4b75eF8f" //user address
-        supportAddress="0x872F28c70eD27D7B8f58cc2A9264A4414548f4fc" //support address
+        supportAddress="0xf2997b416b3214BF1A41431A2B7Fa49F4b75eF8f" //support address
         apiKey="9uYRhy0hol.fDp4IHD7auZOFpNDDtz2Ql4i2W9RYj2tpA9TLWyuX4AmVIC3Ge9MtyAHJAWOB6je"
         env="staging"
         primaryColor="black"
