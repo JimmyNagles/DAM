@@ -11,12 +11,14 @@ const Flappybird = () => {
   const OBSTALE_WIDTH = 40;
 
   const OBSTACLE_GAP = 200;
+
   const [birdPosition, setBirdPosition] = useState(250);
   const [isGameStarted, setisGameStarted] = useState(false);
   const [obstacleHeight, setObstacleHeight] = useState(300);
   const [obstacleLeft, setObstacleLeft] = useState(GAME_WIDTH - OBSTALE_WIDTH);
-  const bottomObstacleHeight = GAME_HEIGHT - OBSTACLE_GAP - obstacleHeight;
   const [score, setScore] = useState(0);
+
+  const bottomObstacleHeight = GAME_HEIGHT - OBSTACLE_GAP - obstacleHeight;
 
   useEffect(() => {
     let timeId;
@@ -48,9 +50,10 @@ const Flappybird = () => {
       setObstacleHeight(
         Math.floor(Math.random() * (GAME_HEIGHT - OBSTACLE_GAP))
       );
+      console.log(`score ${score}`);
       setScore((score) => score + 1);
     }
-  }, [obstacleLeft, isGameStarted]);
+  }, [isGameStarted, obstacleLeft]);
 
   useEffect(() => {
     const hasCollideWithTop =
@@ -79,6 +82,7 @@ const Flappybird = () => {
       setBirdPosition(newbirdPosition);
     }
   };
+
   return (
     <div className="min-h-screen absolut">
       <div className="h-[100px]"></div>
